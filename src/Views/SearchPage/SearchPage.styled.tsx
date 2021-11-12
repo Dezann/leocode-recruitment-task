@@ -18,6 +18,7 @@ export const UsersList = styled.ol`
     flex-direction:column;
     overflow-y: scroll;
     max-height: 300px;
+    min-width: 400px
 `
 
 export const UserWrapper = styled.li`

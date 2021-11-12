@@ -14,10 +14,13 @@ export default function SearchPage() {
         .then(response => response.json())
         .then(data => {
             setUsers(data)
-            setFilteredUsers(data)
             setLoading(false)
         });
     }, [])
+
+    useEffect(() => {
+        setFilteredUsers(users)
+    }, [users])
 
     return (
         loading ? 
@@ -29,14 +32,20 @@ export default function SearchPage() {
         <Container>
             <Title>Users List</Title>
             <SearchBar users={users} setFilteredUsers={setFilteredUsers} />
+            {filteredUsers.length ?
             <UsersList>
-                {filteredUsers.map((user) => (
+                {
+                filteredUsers.map((user) => (
                     <UserWrapper key={user.id}>
                         <Name>{user.name} </Name>
                         <Username>@{user.username}</Username>
                     </UserWrapper>
-                ))}
+                ))
+                }
             </UsersList>
+            :
+            <Title>User not found 😔</Title>
+            }
         </Container>
     )
 }

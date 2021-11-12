@@ -15,6 +15,6 @@ export default function SearchBar({users, setFilteredUsers}: IProps) {
     }
 
     return (
-        <SearchInput onChange={handleChange} placeholder='Search by user name'/>
+        <SearchInput onChange={handleChange} placeholder='Search by user name 🔎'/>
     )
 }
