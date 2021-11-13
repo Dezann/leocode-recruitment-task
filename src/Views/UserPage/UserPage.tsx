@@ -1,10 +1,10 @@
 import React  from 'react'
-import { User } from '../../Types/Models/User/User'
+import { IUser } from '../../Types/Models/User/User'
 import { Title } from '../SearchPage/SearchPage.styled'
 import { Link, Subtitle, UserDataWrapper } from './UserPage.styled'
 
 interface IProps{
-    user?: User;
+    user?: IUser;
 }
 
 export default function UserPage({user}: IProps) {

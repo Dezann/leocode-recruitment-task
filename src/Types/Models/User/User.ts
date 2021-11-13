@@ -15,7 +15,7 @@ interface Company{
     bs: string,
 }
 
-export interface User {
+export interface IUser {
     address:  Address,
     company: Company,
     email: string,

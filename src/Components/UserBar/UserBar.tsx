@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Name, Username, UserWrapper } from './UserBar.styled'
 import Modal from 'react-modal';
 import UserPage from '../../Views/UserPage/UserPage';
-import { User } from '../../Types/Models/User/User';
+import { IUser } from '../../Types/Models/User/User';
 
 interface IProps{
-    user: User;
+    user: IUser;
 }
 
 export default function UserBar({user}: IProps) {

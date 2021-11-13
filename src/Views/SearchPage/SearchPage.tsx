@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { User } from '../../Types/Models/User/User';
+import { IUser } from '../../Types/Models/User/User';
 import SpinnerComponent from '../../Components/Spinner/SpinnerComponent';
 import { Container, Title, UsersList } from './SearchPage.styled'
 import SearchBar from '../../Components/SearchBar/SearchBar';
 import UserBar from '../../Components/UserBar/UserBar';
-import Modal from 'react-modal';
 export default function SearchPage() {
     const [loading, setLoading] = useState<Boolean>(true);
-    const [users, setUsers] = useState<User[]>([])
-    const [filteredUsers, setFilteredUsers] = useState<User[]>([])
+    const [users, setUsers] = useState<IUser[]>([])
+    const [filteredUsers, setFilteredUsers] = useState<IUser[]>([])
 
 
     useEffect(() => {

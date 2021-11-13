@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { User } from '../../Types/Models/User/User';
+import React from 'react'
+import { IUser } from '../../Types/Models/User/User';
 import { SearchInput } from './SearchBar.styled'
 
 interface IProps{
-    users: User[];
+    users: IUser[];
     setFilteredUsers: any;
 }
 
