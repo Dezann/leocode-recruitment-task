@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { User } from '../../Types/Models/User/User';
 import SpinnerComponent from '../../Components/Spinner/SpinnerComponent';
-import { Container, Name, Title, Username, UsersList, UserWrapper } from './SearchPage.styled'
+import { Container, Title, UsersList } from './SearchPage.styled'
 import SearchBar from '../../Components/SearchBar/SearchBar';
-
+import UserBar from '../../Components/UserBar/UserBar';
+import Modal from 'react-modal';
 export default function SearchPage() {
     const [loading, setLoading] = useState<Boolean>(true);
     const [users, setUsers] = useState<User[]>([])
     const [filteredUsers, setFilteredUsers] = useState<User[]>([])
+
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
@@ -36,16 +38,15 @@ export default function SearchPage() {
             <UsersList>
                 {
                 filteredUsers.map((user) => (
-                    <UserWrapper key={user.id}>
-                        <Name>{user.name} </Name>
-                        <Username>@{user.username}</Username>
-                    </UserWrapper>
+                     <UserBar user={user}/>
                 ))
                 }
             </UsersList>
             :
             <Title>User not found 😔</Title>
             }
+
         </Container>
     )
 }
+
