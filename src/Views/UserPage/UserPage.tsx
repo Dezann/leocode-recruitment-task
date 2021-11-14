@@ -4,7 +4,7 @@ import { Title } from "../SearchPage/SearchPage.styled";
 import { Link, Subtitle, UserDataWrapper } from "./UserPage.styled";
 
 interface IProps {
-    user?: IUser;
+    user: IUser;
 }
 
 export default function UserPage({ user }: IProps) {
@@ -12,8 +12,9 @@ export default function UserPage({ user }: IProps) {
         <UserDataWrapper>
             <Title>{user.name}</Title>
             <Subtitle>Username: @{user.username}</Subtitle>
-            <Subtitle>Email: {user.email}</Subtitle>
+            <Subtitle>E-mail: {user.email}</Subtitle>
             <Subtitle>Phone: {user.phone}</Subtitle>
+            <Subtitle>City: {user.address.city}</Subtitle>
             <Subtitle>
                 Website:{" "}
                 <Link href={"https://" + user.website}>{user.website}</Link>

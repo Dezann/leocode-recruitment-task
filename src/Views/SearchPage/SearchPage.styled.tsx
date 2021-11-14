@@ -17,6 +17,9 @@ export const UsersList = styled.ol`
     overflow-y: scroll;
     max-height: 300px;
     min-width: 400px;
+    @media (max-width: 768px) {
+        min-width: 300px;
+    }
 `;
 
 export const UserWrapper = styled.li`

@@ -1,4 +1,4 @@
-interface Address {
+interface IAddress {
     street: string;
     suite: string;
     city: string;
@@ -9,15 +9,15 @@ interface Address {
     };
 }
 
-interface Company {
+interface ICompany {
     name: string;
     catchPhrase: string;
     bs: string;
 }
 
 export interface IUser {
-    address: Address;
-    company: Company;
+    address: IAddress;
+    company: ICompany;
     email: string;
     id: number;
     name: string;

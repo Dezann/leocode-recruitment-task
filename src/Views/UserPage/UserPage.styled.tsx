@@ -5,6 +5,7 @@ export const UserDataWrapper = styled.div`
     align-items: center;
     flex: 1;
     text-align: center;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
 `;

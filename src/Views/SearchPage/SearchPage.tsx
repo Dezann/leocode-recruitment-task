@@ -5,7 +5,7 @@ import { Container, Title, UsersList } from "./SearchPage.styled";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import UserBar from "../../Components/UserBar/UserBar";
 export default function SearchPage() {
-    const [loading, setLoading] = useState<Boolean>(true);
+    const [loading, setLoading] = useState(true);
     const [users, setUsers] = useState<IUser[]>([]);
     const [filteredUsers, setFilteredUsers] = useState<IUser[]>([]);
 
@@ -24,7 +24,7 @@ export default function SearchPage() {
 
     return loading ? (
         <Container>
-            <Title>Loading ... </Title>
+            <Title>Loading... </Title>
             <SpinnerComponent />
         </Container>
     ) : (

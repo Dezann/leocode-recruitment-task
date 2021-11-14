@@ -11,7 +11,7 @@ export default function SearchBar({ users, setFilteredUsers }: IProps) {
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         const searchValue = event.target.value.toLowerCase();
         const filteredUsers = users.filter((user) =>
-            user.name.toLowerCase().includes(searchValue)
+            user.name.toLowerCase().includes(searchValue) || user.username.toLowerCase().includes(searchValue)
         );
         setFilteredUsers(filteredUsers);
     }
